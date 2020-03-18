@@ -30,3 +30,21 @@ def test_CanCalucateTotalDiscount(invoice, products):
 def test_CanCalucateTotalPurePrice(invoice, products):
     invoice.totalPurePrice(products)
     assert invoice.totalPurePrice(products) == 69.38
+
+
+######## New test cases:
+def test_CanCalucateTotalQnt(invoice, products):
+    invoice.totalQnt(products)
+    assert invoice.totalQnt(products) == 15
+
+def test_ProductQuantityHasNoZeroValue(invoice, products):
+    invoice.ProductQuantityHasNoZeroValue(products)
+    assert invoice.ProductQuantityHasNoZeroValue(products) == True
+
+def test_ProductUnitPriceHasNoZeroValue(invoice, products):
+    invoice.ProductUnitPriceHasNoZeroValue(products)
+    assert invoice.ProductUnitPriceHasNoZeroValue(products) == True
+
+def test_ProductDiscountHasNoZeroValue(invoice, products):
+    invoice.ProductDiscountHasNoZeroValue(products)
+    assert invoice.ProductDiscountHasNoZeroValue(products) == True
